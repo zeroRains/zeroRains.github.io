@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
+    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
+    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -142,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/2021/09/11/Unifying-Nonlocal-Blocks-for-Neural-Networks/</loc>
+    <loc>http://blog.zerorains.top/2021/08/25/Region-Mutual-Information-Loss-for-Semantic-Segmentation/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/2021/08/25/Region-Mutual-Information-Loss-for-Semantic-Segmentation/</loc>
+    <loc>http://blog.zerorains.top/2021/09/11/Unifying-Nonlocal-Blocks-for-Neural-Networks/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -177,6 +177,13 @@
   </url>
   
   <url>
+    <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zerorains.top/2021/05/05/%E5%AE%9E%E6%97%B6%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -185,13 +192,6 @@
   
   <url>
     <loc>http://blog.zerorains.top/2021/05/05/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</loc>
-    
-    <lastmod>2022-06-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/2021/05/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/</loc>
-    
-    <lastmod>2022-06-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.zerorains.top/2021/05/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA%E2%80%94%E2%80%94%E7%B4%A2%E5%BC%95%E4%B8%8E%E8%A7%86%E5%9B%BE/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -233,7 +226,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/2021/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>http://blog.zerorains.top/2021/05/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%90%86%E8%AE%BA%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%94%E2%80%94%E4%BC%98%E5%8C%96%E6%9F%A5%E8%AF%A2/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -241,6 +234,13 @@
   
   <url>
     <loc>http://blog.zerorains.top/2021/05/05/%E6%B8%90%E8%BF%9B%E5%BC%8F%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/2021/12/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E5%A4%8D%E4%B9%A0/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -445,13 +445,6 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E7%89%B9%E5%BE%81%E5%AF%B9%E9%BD%90/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.zerorains.top/tags/%E5%AE%9E%E6%97%B6%E6%A3%80%E6%B5%8B/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -466,7 +459,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E5%85%A8%E5%B1%80%E4%B8%8E%E5%B1%80%E9%83%A8/</loc>
+    <loc>http://blog.zerorains.top/tags/%E7%89%B9%E5%BE%81%E5%AF%B9%E9%BD%90/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -474,6 +467,13 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E5%9B%BE%E5%83%8F%E6%94%BB%E5%87%BB/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E5%85%A8%E5%B1%80%E4%B8%8E%E5%B1%80%E9%83%A8/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -494,13 +494,6 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E8%AF%AD%E4%B9%89%E8%A1%A8%E5%BE%81-OCR/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.zerorains.top/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -515,7 +508,14 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E8%A1%A5%E4%B8%81%E6%94%BB%E5%87%BB/</loc>
+    <loc>http://blog.zerorains.top/tags/%E8%AF%AD%E4%B9%89%E8%A1%A8%E5%BE%81-OCR/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -523,6 +523,13 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/Nonlocal/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E8%A1%A5%E4%B8%81%E6%94%BB%E5%87%BB/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -550,14 +557,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</loc>
+    <loc>http://blog.zerorains.top/tags/C/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -571,7 +571,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/C/</loc>
+    <loc>http://blog.zerorains.top/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -592,6 +592,13 @@
   </url>
   
   <url>
+    <loc>http://blog.zerorains.top/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.zerorains.top/tags/%E4%B8%8A%E4%B8%8B%E6%96%87/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -600,13 +607,6 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E6%9D%A1%E4%BB%B6%E5%8D%B7%E7%A7%AF/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -648,13 +648,6 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E7%9B%AE%E6%A0%87%E8%BF%BD%E8%B8%AA/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.zerorains.top/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -663,6 +656,13 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E7%9B%AE%E6%A0%87%E8%BF%BD%E8%B8%AA/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -718,6 +718,20 @@
   </url>
   
   <url>
+    <loc>http://blog.zerorains.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E6%95%99%E5%AD%A6%E8%AF%BE%E7%A8%8B/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.zerorains.top/tags/bfs/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -733,20 +747,6 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E6%90%9C%E7%B4%A2/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E6%95%99%E5%AD%A6%E8%AF%BE%E7%A8%8B/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -795,7 +795,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3/</loc>
+    <loc>http://blog.zerorains.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -816,6 +816,20 @@
   </url>
   
   <url>
+    <loc>http://blog.zerorains.top/tags/%E6%A8%A1%E5%BC%8F%E5%88%86%E8%A7%A3/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E7%B4%A2%E5%BC%95%E4%B8%8E%E8%A7%86%E5%9B%BE/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.zerorains.top/tags/%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -824,13 +838,6 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E8%A7%A6%E5%8F%91%E5%99%A8/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E7%B4%A2%E5%BC%95%E4%B8%8E%E8%A7%86%E5%9B%BE/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -858,34 +865,6 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E6%80%BB%E5%A4%8D%E4%B9%A0/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.zerorains.top/tags/%E6%B8%90%E8%BF%9B%E5%BC%8F/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -900,7 +879,28 @@
   </url>
   
   <url>
-    <loc>http://blog.zerorains.top/tags/%E8%AE%A1%E7%BD%91%E7%89%A9%E7%90%86%E5%B1%82/</loc>
+    <loc>http://blog.zerorains.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E7%BA%BF%E6%80%A7%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E6%80%BB%E5%A4%8D%E4%B9%A0/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -928,6 +928,20 @@
   </url>
   
   <url>
+    <loc>http://blog.zerorains.top/tags/%E8%AE%A1%E7%BD%91%E7%89%A9%E7%90%86%E5%B1%82/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zerorains.top/tags/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</loc>
+    <lastmod>2022-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.zerorains.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
@@ -936,13 +950,6 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E4%BA%A7%E4%B8%9A%E8%90%BD%E5%9C%B0/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -964,13 +971,6 @@
   
   <url>
     <loc>http://blog.zerorains.top/tags/%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/</loc>
-    <lastmod>2022-07-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.zerorains.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D/</loc>
     <lastmod>2022-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
