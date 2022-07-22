@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.zerorains.top/2022/07/21/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DDeep-Incomplete-Multi-view-Clustering-via-Mining-Cluster-Complementarity/</loc>
+    <lastmod>2022-07-22</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.zerorains.top/2022/04/07/%E3%80%8C%E5%88%86%E5%89%B2%E6%B1%87%E6%80%BB%E3%80%8D%E7%99%BE%E5%BA%A6%E4%B8%83%E6%97%A5%E5%88%86%E5%89%B2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</loc>
+    <lastmod>2022-07-21</lastmod>
+  </url>
+  <url>
     <loc>http://blog.zerorains.top/2022/07/18/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DMulti-level-Feature-Learning-for-Contrastive-Multi-view-Clustering/</loc>
     <lastmod>2022-07-20</lastmod>
   </url>
@@ -37,10 +45,6 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2022/04/07/%E3%80%8C%E5%88%86%E5%89%B2%E6%B1%87%E6%80%BB%E3%80%8D%E7%99%BE%E5%BA%A6%E4%B8%83%E6%97%A5%E5%88%86%E5%89%B2%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%952/</loc>
-    <lastmod>2022-06-30</lastmod>
-  </url>
-  <url>
     <loc>http://blog.zerorains.top/2022/05/11/%E3%80%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%8D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
@@ -73,11 +77,11 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
+    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
+    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
@@ -105,11 +109,11 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
+    <loc>http://blog.zerorains.top/2021/05/05/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/05/05/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
