@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>「书籍阅读」分布式计算系统 | ZeroRains Blog</title><meta name="keywords" content="分布式"><meta name="author" content="zerorains,zerorainssakura@qq.com"><meta name="copyright" content="zerorains"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这种框的部分一般是自己衍生出来的疑问与解答(当然有的问题可能暂时没有解答)  分布式系统：若干独立计算机的集合，这些计算机对于用户来说就像是一个单机系统。 分布式系统{分布式计算系统——利用分布式技术支持高性能计算和大规模数据处理分布式信息系统——利用分布式系统技术构建信息管理分布式系统\begin{cases} 分布式计算系统——利用分布式技术支持高性能计算和大规模数据处理\\ 分布式信息系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「书籍阅读」分布式计算系统">
+<meta property="og:url" content="http://blog.zerorains.top/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="ZeroRains Blog">
+<meta property="og:description" content="这种框的部分一般是自己衍生出来的疑问与解答(当然有的问题可能暂时没有解答)  分布式系统：若干独立计算机的集合，这些计算机对于用户来说就像是一个单机系统。 分布式系统{分布式计算系统——利用分布式技术支持高性能计算和大规模数据处理分布式信息系统——利用分布式系统技术构建信息管理分布式系统\begin{cases} 分布式计算系统——利用分布式技术支持高性能计算和大规模数据处理\\ 分布式信息系统">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.zerorains.top/img/25.jpg">
+<meta property="article:published_time" content="2022-10-09T01:53:02.000Z">
+<meta property="article:modified_time" content="2022-10-10T02:54:25.748Z">
+<meta property="article:author" content="zerorains">
+<meta property="article:tag" content="分布式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.zerorains.top/img/25.jpg"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="canonical" href="http://blog.zerorains.top/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-10 10:54:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/assets/apple-touch-icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">76</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">93</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/drink/"><i class="fa-fw fas fa-mug-hot"></i><span> 请我喝茶</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ml.akasaki.space/"><i class="fa-fw fas fa-link"></i><span> DL笔记</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notebook.therainisme.com/"><i class="fa-fw fas fa-link"></i><span> 急救箱</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/25.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZeroRains Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/drink/"><i class="fa-fw fas fa-mug-hot"></i><span> 请我喝茶</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ml.akasaki.space/"><i class="fa-fw fas fa-link"></i><span> DL笔记</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notebook.therainisme.com/"><i class="fa-fw fas fa-link"></i><span> 急救箱</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">「书籍阅读」分布式计算系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-09T01:53:02.000Z" title="发表于 2022-10-09 09:53:02">2022-10-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-10T02:54:25.748Z" title="更新于 2022-10-10 10:54:25">2022-10-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="「书籍阅读」分布式计算系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>这种框的部分一般是自己衍生出来的疑问与解答(当然有的问题可能暂时没有解答)</p>
+</blockquote>
+<p><strong>分布式系统</strong>：若干独立计算机的集合，这些计算机对于用户来说就像是一个单机系统。</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>分布式系统</mtext><mrow><mo fence="true">{</mo><mtable rowspacing="0.3600em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>分布式计算系统——利用分布式技术支持高性能计算和大规模数据处理</mtext></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>分布式信息系统——利用分布式系统技术构建信息管理</mtext></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">分布式系统\begin{cases}
+分布式计算系统——利用分布式技术支持高性能计算和大规模数据处理\\
+分布式信息系统——利用分布式系统技术构建信息管理
+\end{cases}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="mord cjk_fallback">分布式系统</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">分布式计算系统</span><span class="mord">——</span><span class="mord cjk_fallback">利用分布式技术支持高性能计算和大规模数据处理</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">分布式信息系统</span><span class="mord">——</span><span class="mord cjk_fallback">利用分布式系统技术构建信息管理</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>大数据的5个特征：</p>
+<ol>
+<li>数量(volume)：数据量大</li>
+<li>种类(variety)：数据类型多</li>
+<li>速度(velocity)：数据生产速度快</li>
+<li>价值(value)：数据中存在很多的潜在价值</li>
+<li>质量(veracity)：自动采集的数据通常质量比较低</li>
+</ol>
+<p>数据库系统的主要功能模块：</p>
+<ol>
+<li>数据存储</li>
+<li>数据组织模型与访问</li>
+<li>查询处理</li>
+<li>事务管理</li>
+</ol>
+<p>计算密集型应用：计算机在处理时，CPU的处理能力成为了首要限制性因素</p>
+<p>数据密集型应用：计算机在处理时，I/O带宽成为了首要限制因素</p>
+<p>数据处理系统：</p>
+<ol>
+<li>批处理系统：处理静态数据，对吞吐量要求较高实时性较低</li>
+<li>流计算系统：处理动态数据，对实时性要求较高吞吐量要求较低</li>
+<li>批处理融合系统：同一场景不同模块的数据特征和计算需求不同的场景</li>
+</ol>
+<h2 id="Hadoop文件系统">Hadoop文件系统</h2>
+<p>现有问题：</p>
+<ol>
+<li>如何存储上百GB/TB级别的大文件？</li>
+<li>如何保证文件系统的容错？</li>
+<li>如何进行大文件的并发读写控制？</li>
+</ol>
+<p>HDFS在解决上述问题时使用的思想：</p>
+<ol>
+<li>
+<p>文件分块存储：HDFS将大文件切分成块(128MB或其他大小)，这些文件块可以分布到集群中不同的节点上。</p>
+<blockquote>
+<p>为什么这么做？如果是1TB级别的大文件，不按照分块的方式存储，那么就意味着这个文件就直接占满了1个1TB的硬盘，如果比他小的硬盘甚至无法存储。</p>
+<p>这样做有什么好处？分块之后，可以将不同的块存储在不同大小的磁盘中，这些磁盘可以分布在其他机器上。虽然总容量还是1TB的大文件，但是可以存储在不同的机器上，减小了对硬盘容量的要求。</p>
+<p>这样做有什么缺点？先说如果全部塞到一个硬盘中有什么优点，全塞到一个硬盘时，对这个文件的读取和写入的IO过程都是在同一个磁盘上，读取速度相对较快并且可以指定任意读取部分。而采用分块的读取方式后，则在进行读取和写入的IO时是在不同的磁盘上进行的，会产生消息传递的一个延迟，同时每次都只能读取一个完整的块。同时一个文件如果是129MB，块的大小是128MB，那么多出来的这1MB，也要占用一个新的块。</p>
+<p>分块是怎么做的？其实就是针对文件的每128MB取一个切片，形成一个块进行存储，并给这个块赋予一个唯一的编号，方便在对文件进行读写操作时，知道从哪一块中获取数据。</p>
+</blockquote>
+</li>
+<li>
+<p>分块冗余存储：将大文件分成块，每个小块同时进行冗余备份。</p>
+<blockquote>
+<p>为什么这么做？备份的目的就是为了防止某个块损坏时，文件无法正常读取，使用冗余备份，可以在某个块坏掉时，使用备份块进行替换。</p>
+<p>有什么好处？解决了在某个块损坏导致文件无法读取的问题。</p>
+<p>有什么缺点？需要占用更多的存储空间。</p>
+</blockquote>
+</li>
+<li>
+<p>简化文件读写：一次写入后不再修改而是多次读取。</p>
+<blockquote>
+<p>为什么这么做？简化操作，HDFS中一旦文件写入完成之后就不能再被修改，只能执行添加操作。因为文件使用块的方式进行存储，要找到修改的位置在哪个块中的哪个块中是十分费时费力的。</p>
+<p>优点：操作简化，只有创建，添加，删除。</p>
+<p>缺点：要执行修改操作时需要重新写入新文件并删除旧文件，执行时间过长。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="体系架构">体系架构</h3>
+<p><img src="https://blog.zerorains.top/img/HDFS%E6%9E%B6%E6%9E%84.png" alt="HDFS架构"></p>
+<ol>
+<li>NameNode：负责HDFS的管理工作，文件目录结构，位置等元数据，维护DataNode状态，并不实际存储文件。</li>
+<li>Secondary NameNode：NameNode的备份，当NameNode发生故障时利用Secondary NameNode进行恢复。</li>
+<li>DataNode：负责存储文件，根据NameNode的控制信息存储和管理对应的文件块，并定期向NameNode汇报自身的状态。</li>
+</ol>
+<p>NameNode主要维护FsImage和EditLog两个文件，FsImage中记录了HDFS的树形目录结构(树的非叶子节点是路径，叶子节点是对应的块存储位置，而不是存储文件)，EditLog中记录目录及文件修改操作。FsImage和EditLog都是写入到磁盘中的，只是在运行HDFS的过程中，FsImage会加载到内存中，方便使用。</p>
+<p><img src="https://blog.zerorains.top/img/01.2FsImage%E7%BB%93%E6%9E%84.png" alt="01.2FsImage结构"></p>
+<p>SecondaryNameNode通常在与NameNode不同的物理计算机上运行，定期备份FsImage和EditLog两个文件。具体工作流程如下：</p>
+<p><img src="https://blog.zerorains.top/img/01.3SecondaryNameNode%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png" alt="01.3SecondaryNameNode工作流程"></p>
+<p>应用程序的启动流程：</p>
+<ol>
+<li>
+<p>客户端向NameNode发起文件操作请求，常见的发起请求的方式为编写Java程序或使用HDFS Shell等。</p>
+</li>
+<li>
+<p>如果是读写文件操作，则NameNode告知客户端文件块存储的位置信息。如果是创建，删除，重命名目标或文件等操作，NameNode成功修改文件目录结构即结束该操作(删除不会马上在DataNode上删除，而是等到特定的时间才会真正删除)。</p>
+<blockquote>
+<p>为什么不会马上删除呢？因为HDFS中的文件是以块为单位进行存储的，可能有多个块，同时每个块还有对应的冗余备份，在执行命令后让NameNode直接删除DataNode的内容会进行多线程的删除操作，这样会对NameNode产生较大的负担，同时影响其他多线程任务的进行。因此只是删除记录，而不是马上在DataNode中删除。</p>
+<p>那在什么时候删除呢？在执行删除的命令后，会在EditLog中进行记录，并且会在NameNode中移除对应的文件信息。DataNode会定期向NameNode发送心跳信息(DataNode中存储节点的情况)，这时候NameNode会反向索引这些块是否还存在文件树中，如果不存在则通过这次心跳反馈给DataNode，这时候DataNode的文件块才会执行真正的删除操作。</p>
+</blockquote>
+</li>
+<li>
+<p>对于读写文件操作，客户端获知具体位置信息后再与DataNode进行读写交互。</p>
+</li>
+</ol>
+<h3 id="工作原理">工作原理</h3>
+<h4 id="文件分块与备份">文件分块与备份</h4>
+<p>分块就是对一个大型文件按照块的大小进行划分成若干块，划分出来的块会作为HDFS的最小读取单位，在读取时，会完整地对块进行读取，不会因为只有块的一部分是目标而只读一部分。同时在分块时，如果默认分块的大小是128MB，有一个文件是129MB，那么多出来的这1MB，也要占用一个新的块。</p>
+<p>一般来说，HDFS中的每个文件块均设有3个副本：</p>
+<ol>
+<li>
+<p>第一个副本：如果客户端和某一DataNode位于同一物理节点，那么HDFS将第1个副本放置在该DataNode；如果客户端不与任何DataNode位于同一物理节点，那么HDFS随机挑选一台磁盘容量与CPU性能俱佳的节点。</p>
+<blockquote>
+<p>为什么这样设置第一个副本？目的是实现快速写入，如果要写入的目标和写入请求在同一个节点上，那么写入的过程就不会产生太大的数据传输延迟。</p>
+<p>那为什么要选容量与CPU性能俱佳的节点呢？因为如果无法写在同一个DataNode中，那肯定都会产生传输延迟，既然如此就要将这个延迟降低。如果写入时磁盘空间不够，那写入磁盘的时间被浪费掉，同时还要找新的节点。CPU计算得越快，写入的速度也越快，延迟就会下降地更低。</p>
+</blockquote>
+</li>
+<li>
+<p>第2个副本：NameNode将第2个副本防止于不同于第1个副本所在的机架的某一个节点中(磁盘容量与CPU性能也要俱佳)。</p>
+<blockquote>
+<p>为什么要这样做？有一种可能，就是现在要访问的文件块所在的DataNode，或者存放这个文件块的物理计算机宕机了，那么就需要找下一个副本了，如果第2个副本还在这个物理计算机上，那第2个副本也没有用了，所以，通常是放在与第1个副本不同的机架中。如果DataNode没宕机，那何必用第二个副本呢？直接用第1个副本不就行了么。此外，假设第一个副本放在机架1中，第二个副本放在机架2上，如果在机架2中的某个节点想访问这个数据块，那么直接从第二个副本中读取，就能减少机架间的数据传输延迟。</p>
+</blockquote>
+</li>
+<li>
+<p>第3个副本：NameNode将第3个副本放置在第一个副本所在机架的不同节点。</p>
+<blockquote>
+<p>为什么要这么做？如果第一个副本宕机了，而位于与第一个副本相同机架的某个节点发起了读取请求，无法直接访问第一个副本了，那就可以快速地直接访问第3个副本。同时如果这时候机架间通讯也坏掉了，这时候第三个副本的作用也更大了(因为机架间通讯坏掉的话，拿到第二个副本就不可能了)</p>
+</blockquote>
+</li>
+<li>
+<p>如果还有其他副本，就选一台磁盘容量与CPU性能俱佳的节点直接进行存储就行。</p>
+</li>
+</ol>
+<h4 id="文件写入">文件写入</h4>
+<ol>
+<li>首先是将文件进行分块，然后客户端与NameNode进行通信，请求写入一个文件块。</li>
+<li>NameNode根据启发式的策略决定文件块放置的DataNode，并将DataNode的位置告知客户端。</li>
+<li>客户端与DataNode1建立连接，DataNode2与DataNode2建立连接，DataNode2与DataNode3建立连接，客户端将文件块以流水线的方式写入这些DataNode(客户端不是一次性发送完整个文件，而是以更小的数据包为单位进行传输，数据包写入本地缓存后，立刻把这个数据包转发给下一个节点)。</li>
+<li>DataNode3写完毕后向DataNode2发送确认信息，随后DataNode2向DataNode1发送确认消息，最后，DataNode1向客户端发送确认消息，表示该文件块成功写入。但是并不意味着文件的写入已经完成了，如果文件还有其他的文件块，则会继续按照上面的步骤按顺序进行发送。</li>
+</ol>
+<p><img src="https://blog.zerorains.top/img/image-20221009181703451.png" alt="image-20221009181703451"></p>
+<blockquote>
+<p>这样的写入方式有什么优点？能够写入到多个廉价的机器上，具备比较高的容错性。同时按照流水线的写入方式可以确保每个文件块及其副本都已经准确写入到对应的DataNode上。通过消息回馈也能让服务端知道什么时候文件传输完成。</p>
+<p>这样的写入有什么缺点？为了保证数据文件的一致性，牺牲了执行时间，按照这种流水线的写入方式，让整个写入过程都是串行进行的，写入比较缓慢。同时一个文件不同块的写入过程也是串行的，这就导致速度更慢了。因为是按块写入，如果小文件比较多的话，这个空间利用率有点低。</p>
+<p>(question：一个文件块及其副本传输是串行的我能理解，但为啥一个文件的不同文件块不能并发写入呢？如果是为了避免两个块刚好写到一半，磁盘就满了这个情况，那不能提前在服务端预估一下要占用的空间，从而进行一个初步判断是否能写入就解决了么？)</p>
+</blockquote>
+<h4 id="文件读取">文件读取</h4>
+<ol>
+<li>客户端与NameNode通信，请求读取一个文件</li>
+<li>NameNode根据文件的路径等信息判断读取请求是否合法，如果合法则向客户端返回文件中所有数据块的存放地址。</li>
+<li>对于第1个数据块，客户端从距离最近的存放该数据块的DataNode读取数据。</li>
+<li>当第1个数据块读取完毕后，客户端从距离最近的存放第2个数据块的DataNode读取数据</li>
+<li>以此类推客户端读取下一个数据块，直到读取完所有的数据块。</li>
+</ol>
+<p><img src="https://blog.zerorains.top/img/image-20221009184546161.png" alt="image-20221009184546161"></p>
+<blockquote>
+<p>question：按照上面的读取描述，每一个块的读取过程都是串行的，还是老问题，为什么不能并发读取每一个块，然后异步整合成每一个文件呢？总不能说这样设计太难了，所以没有这么干吧。</p>
+</blockquote>
+<h4 id="文件读写一致性">文件读写一致性</h4>
+<p>HDFS中约定：同一时刻仅能发生一个写文件的请求，文件写入后即不可更改，并且文件写入后的读取操作可以并发执行。</p>
+<p>HDFS采用<strong>一次写入、多次读取</strong>的简化一致性模型</p>
+<ol>
+<li>一个文件经过创建、写入和关闭后即不得改变文件中的已有内容</li>
+<li>若已经写入HDFS文件，则仅允许在文件末尾追加数据</li>
+<li>当对一个文件执行写入操作或者追加操作时，NameNode将拒绝其他针对该文件的读、写请求</li>
+<li>当对一个文件执行读取操作时，NameNode允许其他针对该文件的读请求。</li>
+</ol>
+<h3 id="容错机制">容错机制</h3>
+<h4 id="NameNode故障">NameNode故障</h4>
+<p>NameNode故障之后通常由SecondaryNameNode进行恢复，在之间讲述了SecondaryNameNode的工作方式，所以NameNode在故障之后，SecondaryNameNode中存储了NameNode中的信息，所以就可以直接重启NameNode并通过SecondaryNameNode中的备份信息对NameNode的结果进行恢复。</p>
+<p>需要注意的是，如果在SecondaryNameNode备份过程中，有用户对文件进行了操作，EditLog.new就不再为空，在备份完成后，NameNode故障了，则EditLog.new中的内容是不会存在SecondaryNameNode中。因此这种容错机制是&quot;冷备份&quot;而非&quot;热备份&quot;。在Haddoop 2.x的版本中，增加了高可用性的支持，其中配置了活动-备用NameNode，其可以接管故障的NameNode任务。</p>
+<h4 id="DataNode故障">DataNode故障</h4>
+<p>DataNode会定期向NameNode发送心跳以表示节点处于活跃状态。如果NameNode在一定时间范围内没有收到DataNode发送的心跳，那么NameNode就认为DataNode宕机了，标记DataNode为不可用状态。当客户端访问文件涉及到不可用的DataNode时，就不会使用这个宕机的DataNode中的数据，而是使用其他DataNode中的文件块。</p>
+<p>同时，DataNode宕机后会导致一部分的文件块冗余备份没有达到系统的要求，因此会使用之前提到的启发式策略对文件块进行冗余备份。</p>
+<blockquote>
+<p>question：因为NameNode和DataNode可能不在同一台物理设备上，因此心跳的传输可能会通过网络传输等方式进行，如果心跳在发往NameNode的途中出错了，导致心跳信号无法到达NameNode。那么，本来DataNode没有故障，但NameNode却认为其故障了，这时候应该怎么办呢？</p>
+<p>我感觉，这个应该好解决，就是NameNode先标记为不可用，然后等到DataNode进行下一次心跳的时候，如果接收到了，就在NameNode中，将对应的DataNode的不可用状态标记为可用。</p>
+<p>但是这时候还会产生一个问题，就是不可用的时候会触发冗余备份，那么在等到好的DataNode第二次心跳带来前，冗余备份就完成了或者在进行中，这时候本来需要荣誉备份的变成不需要了，这时候会不会浪费掉存储空间或一部分计算资源呢？</p>
+<p>还有没有一种可能，NameNode标记为不可用之后，就给DataNode发送重启信号，重启之后他存储的东西就全部丢掉。</p>
+</blockquote>
+<h2 id="批处理系统MapReduce">批处理系统MapReduce</h2>
+<h3 id="设计思想">设计思想</h3>
+<p>MPI是在MapReduce之前更早产生的分布式计算系统，其为程序员提供了一个并行环境库(基于一种消息传递接口)，程序员可以通过调用MPI提供的程序接口达到并行处理的目的。其存在如下缺点：</p>
+<ol>
+<li>从用户编程来看，程序员需要考虑进程之间的并行问题，进程之间的通信需要用户在程序中进行显式表达。</li>
+<li>采用多进程的方式进行，当某一进程崩溃，如果之前没有添加故障恢复的功能，否则MPI并不提供容错功能。</li>
+</ol>
+<p>MPI不提供容错功能，将会导致计算资源的浪费，分布式计算系统应该具备容错能力，这就是MapReduce与MPI的重要区别。</p>
+<h4 id="数据模型">数据模型</h4>
+<p>数据在MapReduce流动的过程，通常是以键值对的形式，按照不同的键值，实现对一些列数值的处理。MapReduce是分布式计算系统的一个框架，其数据来源通常也是分布式存储系统(比如HDFS)。基本数据流动过程如下图所示：</p>
+<p><img src="https://blog.zerorains.top/img/image-20221010095836173.png" alt="image-20221010095836173"></p>
+<h4 id="计算模型">计算模型</h4>
+<p>MapReduce将复杂的、运行大规模分布式集群中的并行计算过程高度抽象为Map和Reduce两个过程，采用分治的策略对数据进行并行处理。和上图一样，Map过程将输入键值对进行一次转化，产生若干新的键值对，Map转化后的键值对的内容是不同的。MapReduce框架将Map转化得到的键值对按照键值进行分组，即shuffle，从而狙击拥有不同键的键值对。之后，Reduce过程相对相同键的键值对进行计算，并根据需要将计算结果进行一次键值对转化后输出。</p>
+<p>MapReduce无须关系分布式系统中节点间的通信方式，可以像编写集中式程序那样编写MapReduce代码。此外，系统可以并行启动一系列进程以执行Map和Reduce操作，一旦出现故障，MapReduce框架可以自动进行容错处理，无须用户参与。</p>
+<h3 id="体系结构">体系结构</h3>
+<h4 id="架构图">架构图</h4>
+<p>MapReduce采用&quot;主从&quot;架构，如下图所示：</p>
+<p><img src="https://blog.zerorains.top/img/02.1MapReduce%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="02.1MapReduce架构图"></p>
+<ol>
+<li>JobTracker：主节点运行的后台进程，负责整个系统的资源管理和作业管理。监控TaskTracker管理系统拥有的计算资源，作业管理是指JubTracker负责将作业(Job)拆分成任务(Task)，并进行任务调度以及跟踪任务的运行进度。</li>
+<li>TaskTracker：从节点运行的后台进程，负责管理本节点的资源、执行JobTracker的命令并汇报情况。TaskTracker使用slot等量划分本节点中的计算资源，接收JobTracker发送的命令并执行，通过心跳将本节点的资源使用情况和任务运行进度汇报给JobTracker</li>
+<li>Task：从节点在应用程勋执行过程中启动的进程，负责任务执行。JobTracker根据TaskTracker汇报的信息进行调度，命令存在空闲slot的TaskTracker启动Task进程执行Map或Reduce任务，即MapTask或ReduceTask。在hadoop的MapReduce中，这些进程的名称为Child</li>
+<li>客户端：提交应用程序启动的进程，负责将用户编写的MapReduce程序提交给JobTracker。在hadoop的MapReduce中，这些进程的名称为RunJar</li>
+</ol>
+<p>为了避免通过网络读写输入输出数据的高额代价，MapReduce和HDFS通常部署于同一组物理节点，而TaskTracker和DataNode部署在同一个物理节点。JobTracker和NameNode部署在同一个物理节点，TaskTracker和DataNode部署在同一个物理节点。因此，MapReduce可以选择输入数据的DataNode所在的节点启动MapTask，从而节省了远程读取数据的网络开销。同理ReduceTask也可以用相同的方式，节省远程写入数据的网络开销。</p>
+<p><img src="https://blog.zerorains.top/img/image-20221010105203115.png" alt="image-20221010105203115"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:zerorainssakura@qq.com">zerorains</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://blog.zerorains.top/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/">http://blog.zerorains.top/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://blog.zerorains.top" target="_blank">ZeroRains Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></div><div class="post_share"><div class="social-share" data-image="/img/25.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/10/01/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"><img class="next-cover" src="/img/33.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">「书籍阅读」数据密集型应用系统设计</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/assets/apple-touch-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">zerorains</div><div class="author-info__description">No matter what happens, I will do my best.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">76</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">93</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zeroRains"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://message?uin=2274033547" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://github.com/zeroRains" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerorainssakura@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/kiminoamae?spm=1000.2115.3001.5343" target="_blank" title="csdn"><i class="fab fa-cuttlefish"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">未来主要研究方向。。。算了还是先学好基础。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">Hadoop文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">体系架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%88%86%E5%9D%97%E4%B8%8E%E5%A4%87%E4%BB%BD"><span class="toc-number">1.2.1.</span> <span class="toc-text">文件分块与备份</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5"><span class="toc-number">1.2.2.</span> <span class="toc-text">文件写入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="toc-number">1.2.3.</span> <span class="toc-text">文件读取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-number">1.2.4.</span> <span class="toc-text">文件读写一致性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E9%94%99%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.</span> <span class="toc-text">容错机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#NameNode%E6%95%85%E9%9A%9C"><span class="toc-number">1.3.1.</span> <span class="toc-text">NameNode故障</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DataNode%E6%95%85%E9%9A%9C"><span class="toc-number">1.3.2.</span> <span class="toc-text">DataNode故障</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9FMapReduce"><span class="toc-number">2.</span> <span class="toc-text">批处理系统MapReduce</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="toc-number">2.1.</span> <span class="toc-text">设计思想</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">数据模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.1.2.</span> <span class="toc-text">计算模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-number">2.2.1.</span> <span class="toc-text">架构图</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」分布式计算系统"><img src="/img/25.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」分布式计算系统"/></a><div class="content"><a class="title" href="/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」分布式计算系统">「书籍阅读」分布式计算系统</a><time datetime="2022-10-09T01:53:02.000Z" title="发表于 2022-10-09 09:53:02">2022-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/01/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="「书籍阅读」数据密集型应用系统设计"><img src="/img/33.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」数据密集型应用系统设计"/></a><div class="content"><a class="title" href="/2022/10/01/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="「书籍阅读」数据密集型应用系统设计">「书籍阅读」数据密集型应用系统设计</a><time datetime="2022-10-01T06:39:00.000Z" title="发表于 2022-10-01 14:39:00">2022-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/29/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」智能计算系统"><img src="/img/2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」智能计算系统"/></a><div class="content"><a class="title" href="/2022/09/29/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」智能计算系统">「书籍阅读」智能计算系统</a><time datetime="2022-09-29T09:10:17.000Z" title="发表于 2022-09-29 17:10:17">2022-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DNetRL-Task-aware-Network-Denoising-via-Deep-Reinforcement-Learning/" title="「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning"><img src="/img/23.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning"/></a><div class="content"><a class="title" href="/2022/09/18/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DNetRL-Task-aware-Network-Denoising-via-Deep-Reinforcement-Learning/" title="「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning">「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning</a><time datetime="2022-09-18T09:26:22.000Z" title="发表于 2022-09-18 17:26:22">2022-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/08/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DDual-Contrastive-Prediction-for-Incomplete-Multi-View-Representation-Learning/" title="「论文阅读」Dual Contrastive Prediction for Incomplete Multi-View Representation Learning"><img src="/img/33.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「论文阅读」Dual Contrastive Prediction for Incomplete Multi-View Representation Learning"/></a><div class="content"><a class="title" href="/2022/09/08/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DDual-Contrastive-Prediction-for-Incomplete-Multi-View-Representation-Learning/" title="「论文阅读」Dual Contrastive Prediction for Incomplete Multi-View Representation Learning">「论文阅读」Dual Contrastive Prediction for Incomplete Multi-View Representation Learning</a><time datetime="2022-09-08T04:50:58.000Z" title="发表于 2022-09-08 12:50:58">2022-09-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By zerorains</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', '', 'katex-wrap')
+  })
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
