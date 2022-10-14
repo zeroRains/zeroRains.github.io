@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>「书籍阅读」分布式计算系统（二） | ZeroRains Blog</title><meta name="keywords" content="分布式"><meta name="author" content="zerorains,zerorainssakura@qq.com"><meta name="copyright" content="zerorains"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这种框的部分一般是自己衍生出来的疑问与解答(当然有的问题可能暂时没有解答) (ps：本文只是粗略记录，想了解具体细节还是建议要看原书)  流计算系统Storm 与批处理系统处理静态数据不同，这种大量、快速、时变并持续到达的数据称为流数据(stream data)，针对流数据的计算称为流计算。实时性需求是流计算的显著特征，需要设计相应的流计算系统。 设计思想 Storm流计算系统需要处理的数据以流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「书籍阅读」分布式计算系统（二）">
+<meta property="og:url" content="http://blog.zerorains.top/2022/10/12/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
+<meta property="og:site_name" content="ZeroRains Blog">
+<meta property="og:description" content="这种框的部分一般是自己衍生出来的疑问与解答(当然有的问题可能暂时没有解答) (ps：本文只是粗略记录，想了解具体细节还是建议要看原书)  流计算系统Storm 与批处理系统处理静态数据不同，这种大量、快速、时变并持续到达的数据称为流数据(stream data)，针对流数据的计算称为流计算。实时性需求是流计算的显著特征，需要设计相应的流计算系统。 设计思想 Storm流计算系统需要处理的数据以流">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.zerorains.top/img/7.png">
+<meta property="article:published_time" content="2022-10-12T09:18:04.000Z">
+<meta property="article:modified_time" content="2022-10-14T06:59:56.433Z">
+<meta property="article:author" content="zerorains">
+<meta property="article:tag" content="分布式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.zerorains.top/img/7.png"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="canonical" href="http://blog.zerorains.top/2022/10/12/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-14 14:59:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/assets/apple-touch-icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">93</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/drink/"><i class="fa-fw fas fa-mug-hot"></i><span> 请我喝茶</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ml.akasaki.space/"><i class="fa-fw fas fa-link"></i><span> DL笔记</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notebook.therainisme.com/"><i class="fa-fw fas fa-link"></i><span> 急救箱</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/7.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZeroRains Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/drink/"><i class="fa-fw fas fa-mug-hot"></i><span> 请我喝茶</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ml.akasaki.space/"><i class="fa-fw fas fa-link"></i><span> DL笔记</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://notebook.therainisme.com/"><i class="fa-fw fas fa-link"></i><span> 急救箱</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">「书籍阅读」分布式计算系统（二）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-12T09:18:04.000Z" title="发表于 2022-10-12 17:18:04">2022-10-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-14T06:59:56.433Z" title="更新于 2022-10-14 14:59:56">2022-10-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="「书籍阅读」分布式计算系统（二）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>这种框的部分一般是自己衍生出来的疑问与解答(当然有的问题可能暂时没有解答)</p>
+<p>(ps：本文只是粗略记录，想了解具体细节还是建议要看原书)</p>
+</blockquote>
+<h2 id="流计算系统Storm">流计算系统Storm</h2>
+<p>与批处理系统处理静态数据不同，这种大量、快速、时变并持续到达的数据称为流数据(stream data)，针对流数据的计算称为流计算。实时性需求是流计算的显著特征，需要设计相应的流计算系统。</p>
+<h3 id="设计思想">设计思想</h3>
+<p>Storm流计算系统需要处理的数据以流的形式存在，理论上是无界，并且计算要持续进行。Storm系统将流数据抽象为无界的元组序列，并使用拓扑抽象计算过程。</p>
+<h4 id="连续处理">连续处理</h4>
+<p>批处理系统在获取全部要处理的数据时，就开始计算这批数据，计算结束后就自动结束进程。而流计算系统的输入数据是无界的，任务本身需要长期运行在计算节点上，简单来说，就是负责执行计算任务的现成或进程需要长期驻留在系统中。</p>
+<p>连续处理是执行流计算的一种直观的方式，输入的流数据记录不断地进入系统，计算任务长期驻留在计算节点并且更新自身的状态。其中，状态是一种特殊的数据，用于保存从流计算开始到目前为止得到的计算结果，对于流计算系统而言非常重要。</p>
+<h4 id="数据模型">数据模型</h4>
+<p>Storm将流数据看做一个无界的、连续的元组序列。该序列中的元组类似于关系数据库中的元组，一个元组即为系统处理的一条记录，每条记录包含若干字段。字段类似于关系数据库中的属性，可以是基本类型，字符类型、字节数组等。如下图：</p>
+<p><img src="https://blog.zerorains.top/img/07.1Sotrm%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B.png" alt="07.1Sotrm数据模型"></p>
+<h4 id="计算模型">计算模型</h4>
+<p>Storm使用拓扑抽象描述计算过程，拓扑是由Spout和Bolt组成的网络，在逻辑上是一个有向无环图。顶点为Spout或Bolt，用于描述数据处理逻辑，并且定义了输入和输出元组的模式。</p>
+<p>通常Spout是流数据的源头，负责从数据源不断地读取数据，然后封装成元组形式发送给Bolt。Bolt描述针对流数据的转换过程，其内封装了消息处理逻辑，负责将接收的流数据转换为新的流数据。</p>
+<p>Storm在物理设计时的主要思想是利用分布式架构降低数据处理的延迟，因而拓扑中的Bolt在物理上由若干个任务实现，如下图所示：</p>
+<p><img src="https://blog.zerorains.top/img/image-20221013101547174.png" alt="image-20221013101547174"></p>
+<h3 id="体系架构">体系架构</h3>
+<h4 id="架构图">架构图</h4>
+<p>Storm也是采用&quot;主从&quot;架构，主、从节点之间的协调和控制依赖于ZooKeeper，具体架构图如下：</p>
+<p><img src="https://blog.zerorains.top/img/07.2Storm%E6%9E%B6%E6%9E%84%E5%9B%BE.png" alt="07.2Storm架构图"></p>
+<ol>
+<li>Nimbus：主节点运行的后台程序，充当管理员的角色。存储用户提交的Topology程序代码，并负责分发代码，分配任务和检测故障等。</li>
+<li>Supervisor：从节点运行的后台程序，负责监听所在机器的工作，根据Nimbus分配的任务决定启动或停止Worker进程，一个从节点上同时运行若干Worker进程。</li>
+<li>ZooKeeper：负责Nimbus和Supervisor之间的协调工作。Supervisor的地址以及作业的元信息均存储于ZooKeeper中。若Nimbus进程或Supervisor进程以外终止，则重启是需要读取ZooKeeper的数据进行恢复。</li>
+<li>Worker：负责任务运行的进程，进程内部运行一个或多个Executor线程，从而实际执行任务。</li>
+</ol>
+<p>Storm与MapReduce、Spark对比</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>MapReduce</th>
+<th>Storm</th>
+<th>Spark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统进程</td>
+<td>JobTracker</td>
+<td>Nimbus</td>
+<td>Master</td>
+</tr>
+<tr>
+<td>系统进程</td>
+<td>TaskTracker</td>
+<td>Supervisor</td>
+<td>Worker</td>
+</tr>
+<tr>
+<td>系统进程</td>
+<td>Child</td>
+<td>Worker</td>
+<td>CoarseGrainedExecutorBackend</td>
+</tr>
+<tr>
+<td>工作线程</td>
+<td>-</td>
+<td>Executor</td>
+<td>Task</td>
+</tr>
+<tr>
+<td>任务代码</td>
+<td>Task</td>
+<td>Task</td>
+<td>Task</td>
+</tr>
+<tr>
+<td>基础接口</td>
+<td>Map/Reduce</td>
+<td>Spout/Blot</td>
+<td>RDD API</td>
+</tr>
+</tbody>
+</table>
+<h4 id="应用程序执行流程">应用程序执行流程</h4>
+<p><img src="https://blog.zerorains.top/img/image-20221013110028139.png" alt="image-20221013110028139"></p>
+<ol>
+<li>用户编写程序，经过序列化、打包并提交给主节点Nimbus</li>
+<li>Nimbus创建一个组件与物理节点的对应关系文件，并将该文件原子地写入ZooKeeper中的某一Znode</li>
+<li>所有的Supervisor监听ZooKeeper中的Znode以得到通知，从而获取所在节点需要执行的组件任务。</li>
+<li>Supervisor从Nimbus处拉取可执行的代码</li>
+<li>Supervisor启动若干Worker进程执行具体的任务</li>
+<li>Worker进程根据从ZooKeeper中获取的文件信息启动若干Executor线程，该线程负责执行组件所描述的任务。</li>
+</ol>
+<p>Executor线程执行同一个组件的一个或多个任务，但通常只执行一个任务，如果执行多个任务，这些任务必然属于同一个组件，并且由Executor线程串行执行。Spout和Bolt组件的Task数量是不变的，因此对Topology中组件并行度的动态调整实际上是通过改变Executor的数量完成的。</p>
+<h3 id="工作原理">工作原理</h3>
+<p>Storm系统在数据输入、转换以及输出的过程中，由Spout负责数据的输入，而Bolt负责数据的转化以及输出。不同组件之间是通过元组传输进行的，为了完成元组传输需要解决如下问题：</p>
+<ol>
+<li>对流数据来说，上游组件的任务发送哪些元组给下游组件的任务</li>
+<li>对于一条元组来说，上游组件的任务如何向下游组件的任务传递</li>
+</ol>
+<p>Storm通过流数据分组策略(steam grouping)确定元组传输的方式，且发送的过程一次只传递一条元组。</p>
+<h4 id="流数据分组策略">流数据分组策略</h4>
+<p>流数据分组策略定义了两个存在订阅关系的组件之间进行元组传输的方式。常见流数据分组策略如下：</p>
+<ol>
+<li>随机分组(shuffle grouping)：随机分发元组，保证下游组件任务接收元组的数量大致相当</li>
+<li>按字段分组(fields grouping)：保证指定字段内容相同的元组分配到同一个任务中</li>
+<li>部分按字段分组(partial key grouping)：与按字段分组类似，但当数据倾斜时下游组件的任务之间会进行负载均衡。</li>
+<li>广播分组(all grouping)：每个任务均会收到所有的元组</li>
+<li>全局分组(global grouping)：所有的元组均发送到同一个任务中</li>
+<li>不分组(non grouping)：目前和随机分组一致</li>
+<li>直接分组(direct grouping)：允许上游组件直接指定其发出的元组由下游组件的哪个任务接收并处理</li>
+<li>本地或随机分组(local or shuffle grouping)：入股下游组件有一个或多个任务与上游组件的任务处于同一个Worker进程中，则元组将被随机分发到该进程的任务中。</li>
+</ol>
+<h4 id="元组传递方式">元组传递方式</h4>
+<p>Storm采用一次一元组(一次一记录)的消息传递机制，一档上游组件的任务处理完毕一条元组，则立即发送给下游组件的任务，并且一次发送一条元组。这种立即发送的消息传递机制有利于减少处理的延迟，从而满足实时性需求。</p>
+<h3 id="容错机制">容错机制</h3>
+<ol>
+<li>主节点的Nimbus发生故障：系统无法接受新的作业，但运行当前作业的从节点Supervisor和Worker仍可以继续工作。
+<ol>
+<li>如果某个Worker发生故障，则所在节点的Supervisor可以试图重启Worker进程</li>
+<li>但Nimbus无法正常工作，因此无法将该Worker调度到其他节点并重新启动</li>
+<li>为了保证高可用性，Storm可以配置一个Nimbus列表，以其中一节点为主Nimbus，其余节点作为备Nimbus，元信息存储在所有主、备Nimbus或可靠的外部分布式存储系统中。一旦Nimbus发生故障，则系统将从备Nimbus中选择一个作为新的Nimbus</li>
+</ol>
+</li>
+<li>仅Supervisor出现故障：Worker进程会继续执行，利用外部监控程序判断该节点能够重启Supervisor，如果可以就重启，否则Nimbus将在其他节点启动新的Supervisor进程，所有受其监控的Worker进程均需重新调度。</li>
+<li>仅Worker出现故障：Supervisor会试图重启Worker。若无法成功重启，Nimbus将命令其他节点的Supervisor启动Worker进程。</li>
+<li>Worker和Supervisor同时故障：Nimbus将命令其他节点的Supervisor启动Worker进程</li>
+</ol>
+<h4 id="容错语义">容错语义</h4>
+<p>Worker中的Executor线程负责执行处理组件的任务，一旦Worker发生故障即百世进入节点的信息可能由Executor线程负责的Task处理，也可能未经处理即随着故障的发生而丢失。因此，容错保障还需要考虑语义的正确性，理想情况下，可靠的容错保障莺歌使得流计算系统正常运行所处理的消息与发生故障重启后处理的消息完全一致，通常有以下3个级别：</p>
+<ol>
+<li>至多一次(at most once)：消息可能会丢失</li>
+<li>至少一次(at least once)：消息不会丢失，但可能会重复</li>
+<li>准确一次(exactly once)：消息不丢失，不重复</li>
+</ol>
+<p>仅重启Worker，则容错语义的级别为至多一次。原生Storm系统将Spout发出的每一条元组及其后续衍生得到的元组视为一棵元组树，如果该元组树的所有元组均由系统成功输出，则表示源元组得到成功处理。Storm使用ACK机制对元组树中的元组进行确认，一旦元组树中的某一元组因故障而无法得到确认，则系统从Spout将元组进行重放。(因为会出现因只有一个元组没得到确认而全部重放的情况，所以这种方式达到至少一次的容错语义)</p>
+<h4 id="元组树">元组树</h4>
+<p>Spout中的每条元组对应一棵元组树。在Storm中，Spout发出元组时用户可以为其指定标识，称为Spout-Tuple-id（STid），STid可以是任意对象，在后续Bolt处理中，该标识会传递给新的元组。如果Spout中的多个元组公用一个STid，则在逻辑上将这些元组及其衍生元组构成一棵元组树。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:zerorainssakura@qq.com">zerorains</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://blog.zerorains.top/2022/10/12/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/">http://blog.zerorains.top/2022/10/12/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://blog.zerorains.top" target="_blank">ZeroRains Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></div><div class="post_share"><div class="social-share" data-image="/img/7.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/"><img class="next-cover" src="/img/28.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">「书籍阅读」分布式计算系统（一）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/10/09/「书籍阅读」分布式计算系统/" title="「书籍阅读」分布式计算系统（一）"><img class="cover" src="/img/28.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-09</div><div class="title">「书籍阅读」分布式计算系统（一）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/assets/apple-touch-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">zerorains</div><div class="author-info__description">No matter what happens, I will do my best.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">93</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zeroRains"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://message?uin=2274033547" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://github.com/zeroRains" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:zerorainssakura@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/kiminoamae?spm=1000.2115.3001.5343" target="_blank" title="csdn"><i class="fab fa-cuttlefish"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">未来主要研究方向。。。算了还是先学好基础。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9FStorm"><span class="toc-number">1.</span> <span class="toc-text">流计算系统Storm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="toc-number">1.1.</span> <span class="toc-text">设计思想</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%A4%84%E7%90%86"><span class="toc-number">1.1.1.</span> <span class="toc-text">连续处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.2.</span> <span class="toc-text">数据模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">计算模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">体系架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%E5%9B%BE"><span class="toc-number">1.2.1.</span> <span class="toc-text">架构图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">应用程序执行流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text">工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84%E7%AD%96%E7%95%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">流数据分组策略</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">元组传递方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E9%94%99%E6%9C%BA%E5%88%B6"><span class="toc-number">1.4.</span> <span class="toc-text">容错机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E9%94%99%E8%AF%AD%E4%B9%89"><span class="toc-number">1.4.1.</span> <span class="toc-text">容错语义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E6%A0%91"><span class="toc-number">1.4.2.</span> <span class="toc-text">元组树</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/12/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/" title="「书籍阅读」分布式计算系统（二）"><img src="/img/7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」分布式计算系统（二）"/></a><div class="content"><a class="title" href="/2022/10/12/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%BA%8C%EF%BC%89/" title="「书籍阅读」分布式计算系统（二）">「书籍阅读」分布式计算系统（二）</a><time datetime="2022-10-12T09:18:04.000Z" title="发表于 2022-10-12 17:18:04">2022-10-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」分布式计算系统（一）"><img src="/img/28.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」分布式计算系统（一）"/></a><div class="content"><a class="title" href="/2022/10/09/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」分布式计算系统（一）">「书籍阅读」分布式计算系统（一）</a><time datetime="2022-10-09T01:53:02.000Z" title="发表于 2022-10-09 09:53:02">2022-10-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/01/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="「书籍阅读」数据密集型应用系统设计"><img src="/img/6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」数据密集型应用系统设计"/></a><div class="content"><a class="title" href="/2022/10/01/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="「书籍阅读」数据密集型应用系统设计">「书籍阅读」数据密集型应用系统设计</a><time datetime="2022-10-01T06:39:00.000Z" title="发表于 2022-10-01 14:39:00">2022-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/29/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」智能计算系统"><img src="/img/29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「书籍阅读」智能计算系统"/></a><div class="content"><a class="title" href="/2022/09/29/%E3%80%8C%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB%E3%80%8D%E6%99%BA%E8%83%BD%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F/" title="「书籍阅读」智能计算系统">「书籍阅读」智能计算系统</a><time datetime="2022-09-29T09:10:17.000Z" title="发表于 2022-09-29 17:10:17">2022-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DNetRL-Task-aware-Network-Denoising-via-Deep-Reinforcement-Learning/" title="「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning"><img src="/img/8.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning"/></a><div class="content"><a class="title" href="/2022/09/18/%E3%80%8C%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E3%80%8DNetRL-Task-aware-Network-Denoising-via-Deep-Reinforcement-Learning/" title="「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning">「论文阅读」NetRL: Task-aware Network Denoising via Deep Reinforcement Learning</a><time datetime="2022-09-18T09:26:22.000Z" title="发表于 2022-09-18 17:26:22">2022-09-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By zerorains</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', '', 'katex-wrap')
+  })
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
