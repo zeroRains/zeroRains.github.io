@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.zerorains.top/2023/01/30/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DHET-GMP-A-Graph-based-System-Approach-to-Scaling-Large-Embedding-Model-Training/</loc>
+    <lastmod>2023-02-06</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.zerorains.top/2022/11/17/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DDistME-A-Fast-and-Elastic-Distributed-Matrix-Computation-Engine-using-GPUs/</loc>
+    <lastmod>2022-11-28</lastmod>
+  </url>
+  <url>
     <loc>http://blog.zerorains.top/2022/10/29/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DTuplex-Data-Science-in-Python-at-Native-Code-Speed/</loc>
     <lastmod>2022-11-02</lastmod>
   </url>
@@ -161,11 +169,11 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
+    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
+    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
@@ -193,6 +201,10 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
+    <loc>http://blog.zerorains.top/2021/05/05/%E5%AE%9E%E6%97%B6%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
+    <lastmod>2022-06-30</lastmod>
+  </url>
+  <url>
     <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
@@ -202,10 +214,6 @@
   </url>
   <url>
     <loc>http://blog.zerorains.top/2021/09/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98%E9%9B%86/</loc>
-    <lastmod>2022-06-30</lastmod>
-  </url>
-  <url>
-    <loc>http://blog.zerorains.top/2021/05/05/%E5%AE%9E%E6%97%B6%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
