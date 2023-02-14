@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.zerorains.top/2023/02/10/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DAutoShard-Automated-Embedding-Table-Sharding-for-Recommender-Systems/</loc>
+    <lastmod>2023-02-14</lastmod>
+  </url>
+  <url>
     <loc>http://blog.zerorains.top/2023/01/30/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DHET-GMP-A-Graph-based-System-Approach-to-Scaling-Large-Embedding-Model-Training/</loc>
     <lastmod>2023-02-06</lastmod>
   </url>
@@ -169,11 +173,11 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
+    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/06/12/RefineMask-%E7%BB%86%E7%B2%92%E5%BA%A6%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/</loc>
+    <loc>http://blog.zerorains.top/2021/08/18/Object-Contextual-Representations-for-Semantic-Segmentation/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
