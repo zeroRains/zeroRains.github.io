@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.zerorains.top/2023/03/27/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DDeepRecSys-A-System-for-Optimizing-End-To-End-At-Scale-Neural-Recommendation-Inference/</loc>
+    <lastmod>2023-04-02</lastmod>
+  </url>
+  <url>
     <loc>http://blog.zerorains.top/2023/03/25/%E3%80%8C%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%E3%80%8DFleche-An-Efficient-GPU-Embedding-Cache-for-Personalized-Recommendations/</loc>
     <lastmod>2023-03-25</lastmod>
   </url>
@@ -185,11 +189,11 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/08/17/Hierarchical-Multi-Scale-Attention-for-Semantic-Segmentation/</loc>
+    <loc>http://blog.zerorains.top/2021/08/01/Non-local-Neural-Networks/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/08/01/Non-local-Neural-Networks/</loc>
+    <loc>http://blog.zerorains.top/2021/08/17/Hierarchical-Multi-Scale-Attention-for-Semantic-Segmentation/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
@@ -229,15 +233,15 @@
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
-    <lastmod>2022-06-30</lastmod>
-  </url>
-  <url>
     <loc>http://blog.zerorains.top/2021/05/05/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
     <loc>http://blog.zerorains.top/2021/09/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%A0%E9%A2%98%E9%9B%86/</loc>
+    <lastmod>2022-06-30</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.zerorains.top/2021/11/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
